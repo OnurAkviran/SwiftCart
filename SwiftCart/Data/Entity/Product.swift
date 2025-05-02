@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Product {
+class Product : Codable {
     var id: Int
     var ad: String //name
     var resim: String //image
