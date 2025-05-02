@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(named: "mainColor")
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font:UIFont(name: "Yesteryear-Regular", size: 40)!]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font:UIFont(name: "Yesteryear-Regular", size: 32)!]
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance

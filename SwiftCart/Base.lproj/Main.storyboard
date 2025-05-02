@@ -15,6 +15,17 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-VB-2x0">
+                                <rect key="frame" x="34" y="397" width="335" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="O78-RL-EsM" kind="show" id="83f-ja-oOd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -46,13 +57,32 @@
                     <view key="view" contentMode="scaleToFill" id="6md-1P-Mig">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E8l-Mg-DLM">
+                                <rect key="frame" x="32" y="138" width="338" height="338"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="FXB-5X-xHQ"/>
+                                    <constraint firstAttribute="width" constant="338" id="HAf-v9-N9o"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2v2-oC-dDf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E8l-Mg-DLM" firstAttribute="leading" secondItem="2v2-oC-dDf" secondAttribute="leading" constant="32" id="8hn-3D-wqs"/>
+                            <constraint firstItem="2v2-oC-dDf" firstAttribute="trailing" secondItem="E8l-Mg-DLM" secondAttribute="trailing" constant="32" id="Vga-rB-r59"/>
+                            <constraint firstItem="E8l-Mg-DLM" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="cjc-3D-l5P"/>
+                            <constraint firstItem="E8l-Mg-DLM" firstAttribute="top" secondItem="2v2-oC-dDf" secondAttribute="top" constant="32" id="vRs-Ck-4HR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HEn-1F-Wgu"/>
+                    <connections>
+                        <outlet property="imageView" destination="E8l-Mg-DLM" id="0K0-lw-QFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6b8-GT-Mve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="-482"/>
+            <point key="canvasLocation" x="1786.5671641791043" y="-482.60869565217388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5sl-3T-dt3">
