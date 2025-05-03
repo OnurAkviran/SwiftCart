@@ -20,7 +20,7 @@ class ProductsRepository {
             if let data = response.data {
                 do {
                     let apiResponse = try JSONDecoder().decode(ProductList.self, from: data)
-                    if let list = apiResponse.products {
+                    if let list = apiResponse.urunler {
                         self.productList.onNext(list)
                     }
                 }catch{

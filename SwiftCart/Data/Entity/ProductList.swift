@@ -8,6 +8,6 @@
 import Foundation
 
 class ProductList: Codable {
-    let products: [Product]?
+    let urunler: [Product]?
     var success: Int?
 }

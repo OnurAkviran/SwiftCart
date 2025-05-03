@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     let baseImageUrl = "http://kasimadalan.pe.hu/urunler/resimler/"
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var productTableView: UITableView!
+    var homeViewViewModel = HomeViewViewModel()
     
     var productList = [Product]()
     
@@ -21,6 +22,11 @@ class HomeViewController: UIViewController {
         productTableView.delegate = self
         productTableView.dataSource = self
         
+        _ = homeViewViewModel.productsList.subscribe(onNext: { list in self.productList = list
+            DispatchQueue.main.async{
+                self.productTableView.reloadData()
+            }})
+        
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(named: "mainColor")
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font:UIFont(name: "Yesteryear-Regular", size: 32)!]
@@ -28,14 +34,10 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
-        
-        let p1 = Product(id: 1, ad: "Saat", resim: "saat.png", kategori: "aksesuar", fiyat: 25, marka: "casio")
-        let p2 = Product(id: 2, ad: "ruj", resim: "ruj.png", kategori: "moda", fiyat: 12, marka: "l'oreal")
-        let p3 = Product(id: 3, ad: "Bilgisayar", resim: "bilgisayar.png", kategori: "elektronik", fiyat: 720, marka: "asus")
-        productList.append(p1)
-        productList.append(p2)
-        productList.append(p3)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        homeViewViewModel.getProducts()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
