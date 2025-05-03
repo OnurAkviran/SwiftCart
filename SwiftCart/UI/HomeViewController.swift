@@ -37,6 +37,15 @@ class HomeViewController: UIViewController {
         productList.append(p3)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let destinationProduct = sender as? Product {
+                let destinationViewController = segue.destination as! ProductDetailViewController
+                destinationViewController.product = destinationProduct
+            }
+        }
+    }
 
 
 }
@@ -57,5 +66,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.displayImage(baseImageUrl: baseImageUrl, filename: product.resim)
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = productList[indexPath.row]
+        
+        performSegue(withIdentifier: "toDetail", sender: product)
+        print("tiklandi: \(product.ad)" )
     }
 }

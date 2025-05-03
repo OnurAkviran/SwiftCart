@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		432C239F2DC53CF4002F5FA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 432C239E2DC53CF4002F5FA9 /* Kingfisher */; };
+		434844AB2DC6BE8800ADD452 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 434844AA2DC6BE8800ADD452 /* Alamofire */; };
+		434844B02DC6BEAC00ADD452 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 434844AF2DC6BEAC00ADD452 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434844B02DC6BEAC00ADD452 /* RxSwift in Frameworks */,
 				432C239F2DC53CF4002F5FA9 /* Kingfisher in Frameworks */,
+				434844AB2DC6BE8800ADD452 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +88,8 @@
 			name = SwiftCart;
 			packageProductDependencies = (
 				432C239E2DC53CF4002F5FA9 /* Kingfisher */,
+				434844AA2DC6BE8800ADD452 /* Alamofire */,
+				434844AF2DC6BEAC00ADD452 /* RxSwift */,
 			);
 			productName = SwiftCart;
 			productReference = 4369DD662DC0D55800ADFE05 /* SwiftCart.app */;
@@ -115,6 +121,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				432C239D2DC53CF4002F5FA9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				434844A92DC6BE8800ADD452 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				434844AE2DC6BEAC00ADD452 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4369DD672DC0D55800ADFE05 /* Products */;
@@ -354,6 +362,22 @@
 				minimumVersion = 8.3.2;
 			};
 		};
+		434844A92DC6BE8800ADD452 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		434844AE2DC6BEAC00ADD452 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -361,6 +385,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 432C239D2DC53CF4002F5FA9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		434844AA2DC6BE8800ADD452 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 434844A92DC6BE8800ADD452 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		434844AF2DC6BEAC00ADD452 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 434844AE2DC6BEAC00ADD452 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
