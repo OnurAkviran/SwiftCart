@@ -15,7 +15,8 @@ class CartViewViewModel {
         productsInCartList = productsRepository.productInCartList
     }
     
-    func getProducts() {
-        productsRepository.getProductsInCart(kullaniciAdi: "String")    }
+    func getProductsInCart(kullaniciAdi: String) {
+        productsRepository.getProductsInCart(kullaniciAdi: "String")
+    }
 }
 

@@ -59,7 +59,7 @@ class ProductsRepository {
                         self.productInCartList.onNext(list)
                     }
                 }catch{
-                    print(error.localizedDescription)
+                    print(String(describing: error))
                 }
             }
         }

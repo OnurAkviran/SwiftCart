@@ -194,6 +194,12 @@
                                                 <constraint firstItem="l9b-as-nw0" firstAttribute="leading" secondItem="KPf-Qc-Zl1" secondAttribute="leading" constant="8" id="yey-to-Nky"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cartImageView" destination="yZd-Eg-W6v" id="8b3-KM-Rij"/>
+                                            <outlet property="nameLabel" destination="hq1-Xp-Kws" id="Zvc-x0-S34"/>
+                                            <outlet property="priceLabel" destination="fdj-lY-YXi" id="nyW-Cc-hD9"/>
+                                            <outlet property="routeLabel" destination="dqX-fA-uaB" id="amp-HO-3ia"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
