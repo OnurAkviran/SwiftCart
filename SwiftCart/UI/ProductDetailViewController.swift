@@ -14,7 +14,8 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var amountInCartLabel: UILabel!
+    @IBOutlet weak var amountInCartTextField: UITextField!
+    var amountInCart:Int = 0
     var productDetailViewViewModel = ProductDetailViewViewModel()
     
     let baseImageUrl = "http://kasimadalan.pe.hu/urunler/resimler/"
@@ -43,12 +44,13 @@ class ProductDetailViewController: UIViewController {
         productDetailViewViewModel.getProductsInCart(kullaniciAdi: "onur_akviran")
     }
     
-    @IBAction func increaseAmountInCartButton(_ sender: Any) {
-        if let tempProduct = product {
-            productDetailViewViewModel.postProductsInCart(product: tempProduct, siparisAdeti: 1, kullaniciAdi: "onur_akviran")
-            // todo amount in cart = getProductsInCart siparis adeti
+    @IBAction func addToCartButton(_ sender: Any) {
+        if let siparisAdeti = amountInCartTextField.text{
+            amountInCart = Int(siparisAdeti)!
         }
-    }
-    @IBAction func decreaseAmountInCartButton(_ sender: Any) {
+            if let tempProduct = product {
+                productDetailViewViewModel.postProductsInCart(product: tempProduct, siparisAdeti: amountInCart, kullaniciAdi: "onur_akviran")
+                // todo amount in cart = getProductsInCart siparis adeti
+            }
     }
 }

@@ -255,59 +255,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx6-kv-VlO">
-                                <rect key="frame" x="280" y="594" width="71" height="52"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miktar Giriniz..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9s-ng-Edb">
+                                <rect key="frame" x="118" y="594.66666666666663" width="166" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-mR-MpL">
+                                <rect key="frame" x="81" y="646.66666666666663" width="241" height="51"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.square.fill" catalog="system" subtitle="">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                    </preferredSymbolConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
+                                    <color key="baseBackgroundColor" name="buttonColorLight"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="increaseAmountInCartButton:" destination="O78-RL-EsM" eventType="touchUpInside" id="4au-Zv-Hx0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-WO-lEC">
-                                <rect key="frame" x="147.66666666666666" y="594.66666666666663" width="107" height="51"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZQ-0s-eTg">
-                                <rect key="frame" x="51" y="594" width="71" height="52"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="minus.square.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                    </preferredSymbolConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="decreaseAmountInCartButton:" destination="O78-RL-EsM" eventType="touchUpInside" id="y8t-kp-ZEm"/>
+                                    <action selector="addToCartButton:" destination="O78-RL-EsM" eventType="touchUpInside" id="Klo-En-zy3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2v2-oC-dDf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vZQ-0s-eTg" firstAttribute="leading" secondItem="2v2-oC-dDf" secondAttribute="leading" constant="51" id="3lq-fb-k6R"/>
-                            <constraint firstItem="vZQ-0s-eTg" firstAttribute="top" secondItem="E8l-Mg-DLM" secondAttribute="bottom" constant="156" id="AOi-3j-Z4k"/>
-                            <constraint firstItem="2v2-oC-dDf" firstAttribute="trailing" secondItem="Tx6-kv-VlO" secondAttribute="trailing" constant="51" id="Ayr-DI-jDK"/>
+                            <constraint firstItem="Ko7-mR-MpL" firstAttribute="top" secondItem="R9s-ng-Edb" secondAttribute="bottom" constant="16" id="0m7-JA-cxl"/>
+                            <constraint firstItem="2v2-oC-dDf" firstAttribute="trailing" secondItem="R9s-ng-Edb" secondAttribute="trailing" constant="118" id="ITJ-XC-pnO"/>
                             <constraint firstItem="3s8-bD-Xtp" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="ITn-34-OqF"/>
                             <constraint firstItem="3s8-bD-Xtp" firstAttribute="top" secondItem="dzx-QU-EIK" secondAttribute="bottom" constant="4" id="Lvv-4E-kJy"/>
                             <constraint firstItem="E8l-Mg-DLM" firstAttribute="top" secondItem="2v2-oC-dDf" secondAttribute="top" constant="32" id="P7o-g0-0Vk"/>
                             <constraint firstItem="3gi-Cy-U4m" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="R7k-Sd-Yp7"/>
                             <constraint firstItem="dzx-QU-EIK" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="VH3-tz-h1R"/>
+                            <constraint firstItem="Ko7-mR-MpL" firstAttribute="leading" secondItem="2v2-oC-dDf" secondAttribute="leading" constant="81" id="VPo-ac-Eu5"/>
                             <constraint firstItem="dzx-QU-EIK" firstAttribute="top" secondItem="3gi-Cy-U4m" secondAttribute="bottom" constant="8" id="WOQ-Ku-2rc"/>
-                            <constraint firstItem="Tx6-kv-VlO" firstAttribute="top" secondItem="E8l-Mg-DLM" secondAttribute="bottom" constant="156" id="WWR-05-9rm"/>
-                            <constraint firstItem="MMg-WO-lEC" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="YoM-dQ-nVg"/>
-                            <constraint firstItem="MMg-WO-lEC" firstAttribute="top" secondItem="3s8-bD-Xtp" secondAttribute="bottom" constant="32" id="bdp-1k-LiE"/>
+                            <constraint firstItem="R9s-ng-Edb" firstAttribute="top" secondItem="3s8-bD-Xtp" secondAttribute="bottom" constant="32" id="aO3-N4-Dta"/>
+                            <constraint firstItem="R9s-ng-Edb" firstAttribute="leading" secondItem="2v2-oC-dDf" secondAttribute="leading" constant="118" id="him-AC-62E"/>
                             <constraint firstItem="E8l-Mg-DLM" firstAttribute="centerX" secondItem="6md-1P-Mig" secondAttribute="centerX" id="iqm-a2-MA3"/>
+                            <constraint firstItem="2v2-oC-dDf" firstAttribute="trailing" secondItem="Ko7-mR-MpL" secondAttribute="trailing" constant="80" id="j7i-WO-Mn8"/>
                             <constraint firstItem="3gi-Cy-U4m" firstAttribute="top" secondItem="E8l-Mg-DLM" secondAttribute="bottom" constant="16" id="mrb-Q3-X9N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HEn-1F-Wgu"/>
                     <connections>
-                        <outlet property="amountInCartLabel" destination="MMg-WO-lEC" id="6xD-zT-aaH"/>
+                        <outlet property="amountInCartTextField" destination="R9s-ng-Edb" id="fsZ-Uu-CmP"/>
                         <outlet property="brandLabel" destination="3gi-Cy-U4m" id="T0Z-Yg-B23"/>
                         <outlet property="imageView" destination="E8l-Mg-DLM" id="0K0-lw-QFA"/>
                         <outlet property="nameLabel" destination="dzx-QU-EIK" id="QYr-LM-CMp"/>
@@ -340,8 +326,6 @@
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="minus.square.fill" catalog="system" width="128" height="114"/>
-        <image name="plus.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="buttonColorLight">
             <color red="0.30199998617172241" green="0.66699999570846558" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
