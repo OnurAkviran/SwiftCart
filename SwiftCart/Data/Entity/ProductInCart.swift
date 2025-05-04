@@ -8,7 +8,7 @@
 import Foundation
 
 class ProductInCart : Codable{
-    var sepetid: Int?
+    var sepetId: Int?
     var ad: String?
     var resim: String?
     var kategori: String?
@@ -18,7 +18,7 @@ class ProductInCart : Codable{
     var kullaniciAdi: String?
     
     public init(sepetid: Int, ad: String, resim: String, kategori: String, fiyat: Int, marka: String, siparisAdeti: Int, kullaniciAdi: String) {
-        self.sepetid = sepetid
+        self.sepetId = sepetid
         self.ad = ad
         self.resim = resim
         self.kategori = kategori

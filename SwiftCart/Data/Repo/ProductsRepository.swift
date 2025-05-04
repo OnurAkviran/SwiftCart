@@ -47,11 +47,11 @@ class ProductsRepository {
             }
     }
     
-    func getProductsInCart(kullanici_adi:String) {
+    func getProductsInCart(kullaniciAdi:String) {
         let url = baseUrl + "sepettekiUrunleriGetir.php"
-        let parameters:Parameters = ["kullanici_adi":kullanici_adi]
+        let parameters:Parameters = ["kullaniciAdi":kullaniciAdi]
         
-        AF.request(url, method: .get,parameters: parameters).response{ response in
+        AF.request(url, method: .post,parameters: parameters).response{ response in
             if let data = response.data {
                 do {
                     let apiResponse = try JSONDecoder().decode(ProductInCartList.self, from: data)
