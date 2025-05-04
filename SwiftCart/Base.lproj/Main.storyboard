@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Htw-N4-oHn">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Htw-N4-oHn">
                                                     <rect key="frame" x="8" y="8" width="386" height="104"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-2u-Fs0">
@@ -44,22 +44,22 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-Mq-ZcG">
-                                                            <rect key="frame" x="112" y="0.0" width="274" height="104"/>
+                                                            <rect key="frame" x="136" y="0.0" width="250" height="104"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihR-Rf-fGE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="274" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-jk-P1k">
-                                                                    <rect key="frame" x="0.0" y="36.333333333333336" width="274" height="30.000000000000007"/>
+                                                                    <rect key="frame" x="0.0" y="36.333333333333336" width="250" height="30.000000000000007"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-Ut-AgG">
-                                                                    <rect key="frame" x="0.0" y="82.333333333333329" width="274" height="21.666666666666671"/>
+                                                                    <rect key="frame" x="0.0" y="82.333333333333329" width="250" height="21.666666666666671"/>
                                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -165,6 +165,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseAmountInCartButton:" destination="O78-RL-EsM" eventType="touchUpInside" id="4au-Zv-Hx0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-WO-lEC">
                                 <rect key="frame" x="147.66666666666666" y="594.66666666666663" width="107" height="51"/>
@@ -180,6 +183,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="decreaseAmountInCartButton:" destination="O78-RL-EsM" eventType="touchUpInside" id="y8t-kp-ZEm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2v2-oC-dDf"/>
@@ -203,6 +209,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HEn-1F-Wgu"/>
                     <connections>
+                        <outlet property="amountInCartLabel" destination="MMg-WO-lEC" id="6xD-zT-aaH"/>
                         <outlet property="brandLabel" destination="3gi-Cy-U4m" id="T0Z-Yg-B23"/>
                         <outlet property="imageView" destination="E8l-Mg-DLM" id="0K0-lw-QFA"/>
                         <outlet property="nameLabel" destination="dzx-QU-EIK" id="QYr-LM-CMp"/>

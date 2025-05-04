@@ -73,6 +73,5 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         let product = productList[indexPath.row]
         
         performSegue(withIdentifier: "toDetail", sender: product)
-        print("tiklandi: \(product.ad)" )
     }
 }
