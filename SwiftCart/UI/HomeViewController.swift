@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
             }})
         
         let appearance = UINavigationBarAppearance()
+        
         appearance.backgroundColor = UIColor(named: "mainColor")
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font:UIFont(name: "Yesteryear-Regular", size: 32)!]
         

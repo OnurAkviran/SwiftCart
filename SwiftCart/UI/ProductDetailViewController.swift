@@ -40,15 +40,12 @@ class ProductDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        productDetailViewViewModel.getProductsInCart()
+        productDetailViewViewModel.getProductsInCart(kullaniciAdi: "onur_akviran")
     }
     
     @IBAction func increaseAmountInCartButton(_ sender: Any) {
         if let tempProduct = product {
             productDetailViewViewModel.postProductsInCart(product: tempProduct, siparisAdeti: 1, kullaniciAdi: "onur_akviran")
-            if let tempProductInCart = productInCart {
-                
-            }
             // todo amount in cart = getProductsInCart siparis adeti
         }
     }

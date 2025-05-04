@@ -3,12 +3,13 @@
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SwiftCart" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,7 +25,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IYN-12-vvb">
-                                <rect key="frame" x="0.0" y="162" width="402" height="678"/>
+                                <rect key="frame" x="0.0" y="162" width="402" height="629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productTableViewCell" id="GCT-bH-qTN" customClass="ProductTableViewCell" customModule="SwiftCart" customModuleProvider="target">
@@ -98,6 +99,7 @@
                             <constraint firstItem="BIk-vi-ZTe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oR0-p8-Rlx"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="olj-Jd-xBg"/>
                     <navigationItem key="navigationItem" id="hz6-LP-uzf"/>
                     <connections>
                         <outlet property="productTableView" destination="IYN-12-vvb" id="YPA-6X-luX"/>
@@ -107,22 +109,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.2388059701492" y="-27.459954233409608"/>
+            <point key="canvasLocation" x="855" y="-250"/>
         </scene>
-        <!--Cart View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="v69-VX-rSZ">
+            <objects>
+                <tabBarController id="Zr9-NS-cHE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8l6-C0-ln9"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L4h-0X-XM8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <color key="barTintColor" name="buttonColorLight"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bcN-jG-eo4"/>
+                        <segue destination="pU1-hg-q36" kind="relationship" relationship="viewControllers" id="MfJ-T6-3MI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXw-3w-6Ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="677"/>
+        </scene>
+        <!--Cart-->
         <scene sceneID="9Af-MY-Jis">
             <objects>
-                <viewController id="pU1-hg-q36" customClass="CartViewController" customModule="SwiftCart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Cart" id="pU1-hg-q36" customClass="CartViewController" customModule="SwiftCart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6z-v3-5Bs">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-7U-ZQ7">
+                                <rect key="frame" x="0.0" y="106" width="402" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartTableViewCell" rowHeight="120" id="REJ-oz-Rgp" customClass="CartTableViewCell" customModule="SwiftCart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="402" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="REJ-oz-Rgp" id="KPf-Qc-Zl1">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="l9b-as-nw0">
+                                                    <rect key="frame" x="8" y="8" width="386" height="104"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZd-Eg-W6v">
+                                                            <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="104" id="Ar8-5P-ySd"/>
+                                                                <constraint firstAttribute="height" constant="104" id="UqU-xk-u6m"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-s0-di7">
+                                                            <rect key="frame" x="136" y="0.0" width="250" height="104"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqX-fA-uaB">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-Xp-Kws">
+                                                                    <rect key="frame" x="0.0" y="36.333333333333336" width="250" height="30.000000000000007"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdj-lY-YXi">
+                                                                    <rect key="frame" x="0.0" y="82.333333333333329" width="250" height="21.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l9b-as-nw0" firstAttribute="top" secondItem="KPf-Qc-Zl1" secondAttribute="top" constant="8" id="CI2-zD-KfK"/>
+                                                <constraint firstAttribute="trailing" secondItem="l9b-as-nw0" secondAttribute="trailing" constant="8" id="Fpm-Cb-hXk"/>
+                                                <constraint firstAttribute="bottom" secondItem="l9b-as-nw0" secondAttribute="bottom" constant="8" id="Qqx-OG-kDf"/>
+                                                <constraint firstItem="l9b-as-nw0" firstAttribute="leading" secondItem="KPf-Qc-Zl1" secondAttribute="leading" constant="8" id="yey-to-Nky"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rQs-e9-bV0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rQs-e9-bV0" firstAttribute="bottom" secondItem="6Lf-7U-ZQ7" secondAttribute="bottom" id="AtV-rr-BdS"/>
+                            <constraint firstItem="6Lf-7U-ZQ7" firstAttribute="leading" secondItem="rQs-e9-bV0" secondAttribute="leading" id="erB-C0-KM1"/>
+                            <constraint firstItem="rQs-e9-bV0" firstAttribute="trailing" secondItem="6Lf-7U-ZQ7" secondAttribute="trailing" id="xMn-FY-pQw"/>
+                            <constraint firstItem="6Lf-7U-ZQ7" firstAttribute="top" secondItem="rQs-e9-bV0" secondAttribute="top" id="zMD-9e-IZ3"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart.fill" catalog="system" id="BGe-LH-L5S"/>
+                    <connections>
+                        <outlet property="cartTableView" destination="6Lf-7U-ZQ7" id="zDV-iF-Jcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5p-G5-XM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="190"/>
+            <point key="canvasLocation" x="979" y="677"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="4nV-rm-NbZ">
@@ -231,17 +323,25 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kew-Fg-ywf"/>
+                        <segue destination="Zr9-NS-cHE" kind="relationship" relationship="rootViewController" id="H3K-9C-8C1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itg-Oh-2Ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.835820895522389" y="-27.459954233409608"/>
+            <point key="canvasLocation" x="-324" y="-230"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="minus.square.fill" catalog="system" width="128" height="114"/>
         <image name="plus.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="buttonColorLight">
+            <color red="0.30199998617172241" green="0.66699999570846558" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.21600000560283661" green="0.3880000114440918" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

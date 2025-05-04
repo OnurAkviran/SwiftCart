@@ -16,8 +16,8 @@ class ProductDetailViewViewModel {
         productsInCartList = productsRepository.productInCartList
     }
     
-    func getProductsInCart(){
-        productsRepository.getProductsInCart(kullaniciAdi: "onur_akviran")
+    func getProductsInCart(kullaniciAdi:String){
+        productsRepository.getProductsInCart(kullaniciAdi: kullaniciAdi)
     }
     
     func postProductsInCart(product: Product, siparisAdeti: Int, kullaniciAdi: String) {
